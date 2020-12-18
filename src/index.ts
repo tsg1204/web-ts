@@ -1,13 +1,13 @@
 import { servicesVersion } from 'typescript';
 import { User } from './models/User';
 
-const user = new User({ id:1, name: 'NEW NAME', age: 200 });
+const user = User.buildUser({ id:2});
 
-user.on('save', () => {
+user.on('change', () => {
   console.log(user)
 })
 
-user.save();
+user.fetch();
 // user.set({ name: 'new name', age: 120});
 
 // const user = new User({ name: 'myname', age: 100});
