@@ -1,11 +1,10 @@
 import { User } from './models/User';
 
-const user = new User({ id: 1 });
+const user = new User({ name: 'new name', age: 120 });
+
 
 // user.set({ name: 'new name', age: 120});
 
-user.set({ name: 'no id user', age: 0});
-user.save();
 // const user = new User({ name: 'myname', age: 100});
 
 // user.on('change', () => {
