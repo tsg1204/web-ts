@@ -2,7 +2,9 @@ import { User } from './models/User';
 
 const user = new User({ name: 'new name', age: 120 });
 
-
+user.on('change', () => {
+  console.log('user was changed')
+})
 // user.set({ name: 'new name', age: 120});
 
 // const user = new User({ name: 'myname', age: 100});
