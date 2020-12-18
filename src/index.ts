@@ -1,13 +1,19 @@
+import { UserForm } from './views/UserForm';
 import { Collection } from './models/Collection';
 import { User, UserProps } from './models/User';
 
-const collection = User.buildUserCollection();
+const user = User.buildUser({ name: 'NAME', age: 67})
+const userForm = new UserForm(document.querySelector("#root"), user)
 
-collection.on('change', () => {
-  console.log(collection);
-});
+userForm.render();
 
-collection.fetch();
+// const collection = User.buildUserCollection();
+
+// collection.on('change', () => {
+//   console.log(collection);
+// });
+
+// collection.fetch();
 // user.set({ name: 'new name', age: 120});
 
 // const user = new User({ name: 'myname', age: 100});
