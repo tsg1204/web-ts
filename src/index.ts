@@ -1,8 +1,7 @@
 import { Collection } from './models/Collection';
-import { servicesVersion } from 'typescript';
-import { User } from './models/User';
+import { User, UserProps } from './models/User';
 
-const collection = new Collection('http://localhost:3000/users');
+const collection = User.buildUserCollection();
 
 collection.on('change', () => {
   console.log(collection);
