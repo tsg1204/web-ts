@@ -1,13 +1,14 @@
+import { Collection } from './models/Collection';
 import { servicesVersion } from 'typescript';
 import { User } from './models/User';
 
-const user = User.buildUser({ id:2});
+const collection = new Collection('http://localhost:3000/users');
 
-user.on('change', () => {
-  console.log(user)
-})
+collection.on('change', () => {
+  console.log(collection);
+});
 
-user.fetch();
+collection.fetch();
 // user.set({ name: 'new name', age: 120});
 
 // const user = new User({ name: 'myname', age: 100});
