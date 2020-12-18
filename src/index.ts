@@ -3,7 +3,7 @@ import { Collection } from './models/Collection';
 import { User, UserProps } from './models/User';
 
 const user = User.buildUser({ name: 'NAME', age: 67})
-const userForm = new UserForm(document.querySelector("#root"), user)
+const userForm = new UserForm(document.getElementById("root"), user)
 
 userForm.render();
 
