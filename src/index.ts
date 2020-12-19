@@ -1,11 +1,14 @@
 import { UserForm } from './views/UserForm';
 import { Collection } from './models/Collection';
 import { User, UserProps } from './models/User';
+import { UserEdit } from './views/UserEdit';
 
-const user = User.buildUser({ name: 'NAME', age: 67})
-const userForm = new UserForm(document.getElementById("root"), user)
+const user = User.buildUser({ name: 'NAME 2', age: 167})
+const userEdit = new UserEdit(document.getElementById("root"), user)
 
-userForm.render();
+userEdit.render();
+
+console.log(userEdit);
 
 // const collection = User.buildUserCollection();
 
