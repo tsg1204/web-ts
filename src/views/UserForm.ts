@@ -36,17 +36,4 @@ export class UserForm extends View<User, UserProps> {
       </div>
     `
   }
-
-
-
-  render(): void {
-    this.parent.innerHTML = '';
-
-    const templateElement = document.createElement('template');
-    templateElement.innerHTML = this.template();
-
-    this.bindEvents(templateElement.content);
-
-    this.parent.append(templateElement.content);
-  }
 }
